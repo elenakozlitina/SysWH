@@ -1,5 +1,11 @@
 import unittest
-from ..warehouse import Warehouse
+import sys
+import os
+
+# Добавляем корневую директорию в PYTHONPATH
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from warehouse import Warehouse
 
 class TestWarehouse(unittest.TestCase):
     def setUp(self):
