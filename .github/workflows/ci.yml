@@ -23,8 +23,12 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip  # Обновление pip
-        pip install unittest  # Установка unittest (хотя он встроен в Python)
+        pip install -r requirements.txt  # Установка зависимостей из requirements.txt
         
-    - name: Run tests
+    - name: Run unit tests
       run: |
-        python -m unittest discover -s tests  # Запуск всех тестов из папки tests
+        python -m unittest discover -s tests  # Запуск тестов через unittest
+
+    - name: Run pytest
+      run: |
+        python -m pytest  # Запуск тестов через pytest (если есть)
