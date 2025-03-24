@@ -5,7 +5,7 @@ import os
 # Добавляем корневую директорию в PYTHONPATH
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from 17 import Warehouse
+from 17_warehouse import Warehouse
 
 class TestWarehouse(unittest.TestCase):
     def setUp(self):
