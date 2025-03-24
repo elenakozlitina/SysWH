@@ -29,7 +29,3 @@ jobs:
       run: |
         export PYTHONPATH=$PYTHONPATH:$GITHUB_WORKSPACE  # Добавляем корневую директорию в PYTHONPATH
         python -m unittest discover -s tests  # Запуск тестов через unittest
-
-    - name: Run pytest
-      run: |
-        python -m pytest  # Запуск тестов через pytest
